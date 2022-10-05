@@ -6,7 +6,7 @@ let winner = [
     [3, 4, 5],
     [6, 7, 8],
     [0, 3, 6],
-    [1, 3, 7],
+    [1, 4, 7],
     [2, 5, 8],
     [0, 4, 8],
     [2, 4, 6],
@@ -18,7 +18,7 @@ let currentPlayer = "X" ;
 let running = false;
 
 gameStart()
-
+checkWinner()
 
 function gameStart(){
     box.forEach(box => box.addEventListener("click", boxClicked))
@@ -80,7 +80,7 @@ function checkWinner(){
         running = false;
     }
     else if(possibly.includes("")){
-        changePlayer.textContent = `draw!`;
+        changePlayer.textContent = "draw!";
     }
     else{
         changePlayer();

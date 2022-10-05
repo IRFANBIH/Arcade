@@ -6,6 +6,10 @@ h1{
     border: solid black;
 }
 
+h2{
+    color: gold;
+}
+
 body{
     text-align: center;
 }
@@ -38,4 +42,3 @@ body{
 html{
     background-image: url("images/Lockerroom.png");
 }
- 
