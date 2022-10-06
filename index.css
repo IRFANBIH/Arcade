@@ -1,6 +1,6 @@
 
 .startGame{
-    height: 800px;
+    height: 500px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -27,8 +27,7 @@
     padding: 10px;
     border-radius: 10px;
     color: gold;
-    margin-top: 50px;
-    font-size: 80px;
+    font-size: 40px;
     text-align: center;
 }
 
@@ -37,10 +36,18 @@ body{
     
 
 }
+
+header{
+    background-color: teal;
+    border: solid black;
+    font-size: 30px;
+    margin: 0px;
+    text-align: center;
+}
 .id{
     height: 200px;
     width: 260px;
-    margin: 50px;
+    margin: 10px;
 }
 
 .startGame .character .img >img{
@@ -48,9 +55,8 @@ body{
 }
 
 .startGame .character .img> img:hover{
-    /* height: 210px;
-    width: 270px; */
     background-color: aqua;
+    border-radius: 20px;
 }
 
 .startGame.hide{
@@ -58,7 +64,9 @@ body{
 }
 
 /* board game ////////////////////////////*/
-
+.container.hide{
+    display: none;
+}
 .container{
     height: 800px;
     display: flex;
@@ -106,7 +114,7 @@ body{
     background-size: contain;
 } 
 
-/* .box.x:hover{
+.box.x:hover{
     background: url(images/JamesSmaller.png) no-repeat;
     background-size: contain;
 } 
@@ -114,10 +122,12 @@ body{
 .box.y:hover{
     background: url(images/TravisSmaller.png) no-repeat;
     background-size: contain;
-}  */
-
-.drawMessage{
-    margin: -180px;
+} 
+.textMessage.hide{
+    display: none;
+}
+.textMessage{
+    margin: -80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -125,9 +135,9 @@ body{
     font-size: 30px;
     color: gold;
 
-}
+} 
 
-.loserMessage{
+/* .loserMessage{
     margin: -180px;
     display: flex;
     flex-direction: column;
@@ -145,10 +155,11 @@ body{
     align-items: center;
     font-size: 30px;
     color: gold;
-}
+} */
 
 .startGame .character .img > img.selected{
     background-color: aqua;
     border: 2px solid gold;
     border-radius: 20px;
 }
+
