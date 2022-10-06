@@ -1,0 +1,133 @@
+
+.startGame{
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.primeButton{
+    border: none;
+    background-color: teal;
+    padding: 10px;
+    border-radius: 10px;
+    color: gold;
+    margin-top: 0px;
+    font-size: 40px;
+}
+
+.primeButton:hover{
+    background-color: rgb(14, 227, 227);
+}
+
+.selectCharacter{
+    border: solid black;
+    background-color: teal;
+    padding: 10px;
+    border-radius: 10px;
+    color: gold;
+    margin-top: 50px;
+    font-size: 80px;
+    text-align: center;
+}
+
+body{
+    background-image: url(images/Lockerroom.png);
+    
+
+}
+.id{
+    height: 200px;
+    width: 260px;
+    margin: 50px;
+}
+
+.startGame .character .img >img{
+    cursor: pointer;
+}
+
+.startGame .character .img> img:hover{
+    /* height: 210px;
+    width: 270px; */
+    background-color: aqua;
+}
+
+.startGame.hide{
+    display: none;
+}
+
+/* board game ////////////////////////////*/
+
+.container{
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#board{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    background-image: url(images/BrickWallJags.png);
+    row-gap: 3px;
+    column-gap: 3px;
+}
+
+.box{
+    width: 150px;
+    height: 150px;
+    /* background-color: teal; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+   
+}
+.board.x .box:not(.x):not(.y):hover{
+    background: url(images/JamesSmaller.png) no-repeat;
+    opacity: 0.8;
+}
+/* X IS JAMES Y IS TRAVIS */
+
+.box.x{
+    background: url(images/JamesSmaller.png) no-repeat;
+    background-size: contain;
+} 
+
+.box.y{
+    background: url(images/TravisSmaller.png) no-repeat;
+    background-size: contain;
+} 
+
+.drawMessage{
+    margin: -180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: gold;
+
+}
+
+.loserMessage{
+    margin: -180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: gold;
+}
+
+.winnerMessage{
+    margin: -180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: gold;
+}
