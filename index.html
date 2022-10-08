@@ -5,62 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <title>Document</title>
+    <title>Tic-Tac-Toe</title>
 </head>
-
 <body>
-    <header> Tic - Tac - Toe
-    </header>
-    <!--opening page-->
-    <div class="startGame"> 
-        <h1 class="selectCharacter"> Choose Your Running Back!</h1>
-        <div class="character">
-            <div class="img"> 
+    <h1>Tic-Tac-Toe</h1>
+    <!--start game screen-->
+    <div class="startGame">
+        <h1 class="beginningText"> Choose Your Running Back !</h1>
+        <div class="profile">
+            <div class="img">
                 <img src="./images/James.png" class="id" data-id="x" alt="">
                 <img src="./images/Travis.png" class="id" data-id="y" alt="">
             </div>
         </div>
-        <button class="primeButton" id="startButton">Start Game </button>
+        <button class="primeButton" id="startButton">Start Game</button>
+    </div> 
+
+    <!--Game Board Screen-->
+    <div class="container">
+        <h1 class="textColor beginningText">James Robinson vs Travis Etienne</h1> 
+        <div class="board" id="board"> 
+            <div class="block" dataCell></div>
+            <div class="block" dataCell></div>
+            <div class="block" dataCell></div>
+            <div class="block" dataCell></div>
+            <div class="block" dataCell></div>
+            <div class="block" dataCell></div>
+            <div class="block" dataCell></div>
+            <div class="block" dataCell></div>
+            <div class="block" dataCell></div>
+        </div>
     </div>
-   <!--game board-->
-   <div class="container hide"> 
-    <div class="board" id="board"> 
-        <div class="box" data-cell></div>
-        <div class="box" data-cell></div> 
-        <div class="box" data-cell></div> 
-        <div class="box" data-cell></div>
-        <div class="box" data-cell></div>
-        <div class="box" data-cell></div>
-        <div class="box" data-cell></div>
-        <div class="box" data-cell></div>
-        <div class="box" data-cell></div>
 
+    <!--Draw Result-->
+    <div class="drawMessage">
+        <div class="draw">
+            <h2 class="textCenter textColor">Draw!</h2>
+        </div>
+        <button id="drawButton" class="primeButton">Play Again</button>
     </div>
-   </div>
-<!--Outcome section-->
-   <div class="textMessage hide">
-    <div>
-        <h1 class="textMessage">DRAW!!!</h1>
+
+    <!--Winning Result-->
+    <div class="winMessage"> 
+        <h2 class="textCenter textColor">Winner</h2>
+        <div class="winner"></div>
+        <button id="restartButton" class="primeButton">Play Again</button>
     </div>
-    <button id="drawButton" class="primeButton"> Play Again</button>
-   </div>
-
-   <!--Winner Section-->
-   <!-- <div class="winnerMessage">
-    <h1 class="textMessage"> YOU WIN!! </h1>
-    <div class="Winner"></div>
-    <button id="playAgain" class="primeButton"> Play Again</button>
-   </div> -->
-
-   <!--Loser Section-->
-   <!-- <div class="loserMessage">
-    <h1 class="textMessage"> YOU LOSE!</h1>
-    <div class="loser"></div>
-    <button id="playAgain" class="primeButton"> Play Again</button>
-   </div> -->
-
-
-
-    <script src="/index.js"></script>
+  <script type="module"src="./index.js"></script>
 </body>
-</html>
+</html>  

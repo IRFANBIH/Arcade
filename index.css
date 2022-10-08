@@ -1,6 +1,30 @@
 
-.startGame{
-    height: 500px;
+
+
+*>*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-image: url(./images/Lockerroom.png);
+}
+
+h1{
+    background-color: teal;
+    border: solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+/* start game prettiness */
+.id{
+    height: 150px;
+    width: 180px;
+}
+
+.container{
+    height: 600px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -13,48 +37,30 @@
     padding: 10px;
     border-radius: 10px;
     color: gold;
-    margin-top: 0px;
-    font-size: 40px;
+    font-size: 20px;
+    margin: 20px;
+    cursor: pointer;
 }
 
-.primeButton:hover{
-    background-color: rgb(14, 227, 227);
-}
-
-.selectCharacter{
-    border: solid black;
+.beginningText{
+    border: none;
     background-color: teal;
     padding: 10px;
     border-radius: 10px;
     color: gold;
     font-size: 40px;
-    text-align: center;
 }
 
-body{
-    background-image: url(images/Lockerroom.png);
-    
-
+.primeButton:hover{
+    background-color: aqua;
 }
 
-header{
-    background-color: teal;
-    border: solid black;
-    font-size: 30px;
-    margin: 0px;
-    text-align: center;
-}
-.id{
-    height: 200px;
-    width: 260px;
-    margin: 10px;
-}
-
-.startGame .character .img >img{
+.startGame .profile .img > img{
     cursor: pointer;
-}
 
-.startGame .character .img> img:hover{
+} 
+
+.startGame .profile .img > img:hover{
     background-color: aqua;
     border-radius: 20px;
 }
@@ -63,103 +69,83 @@ header{
     display: none;
 }
 
-/* board game ////////////////////////////*/
-.container.hide{
-    display: none;
-}
-.container{
-    height: 800px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
+/* GAME BOARD PRETTINESS */
 
 #board{
     display: grid;
-    grid-template-columns: repeat(3, auto);
-    background-image: url(images/BrickWallJags.png);
+    grid-template-columns: repeat(3,auto);
+    background-image: url(./images/BrickWallJags.png);
     row-gap: 3px;
     column-gap: 3px;
 }
 
-.box{
+.block{
     width: 150px;
     height: 150px;
-    /* background-color: teal; */
+    /* background-color: aqua; */
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-   
-}
-.board.x .box:not(.x):not(.y):hover{
-    background: url(images/JamesSmaller.png) no-repeat;
-    opacity: 0.8;
+
 }
 
-.board.y .box:not(.x):not(.y):hover{
-    background: url(images/TravisSmaller.png) no-repeat;
-    opacity: 0.8;
+.board.x .block:not(.x):not(.y):hover{
+    background: url(./images/JamesSmaller.png) white no-repeat;
+    opacity: .5;
 }
-/* X IS JAMES Y IS TRAVIS */
 
-.box.x{
-    background: url(images/JamesSmaller.png) no-repeat;
+.board.y .block:not(.x):not(.y):hover{
+    background: url(./images/TravisSmaller.png) teal no-repeat;
+    opacity: .5;
+}
+
+
+/* x is james
+y is travis */
+.block.x{
+    background: url(./images/JamesSmaller.png) white no-repeat;
     background-size: contain;
+}
+
+.block.y{
+    background: url(./images/TravisSmaller.png) teal no-repeat;
+    background-size: contain;
+}
+
+/* draw and win screen */
+
+.startGame,.drawMessage, .winMessage{
+    position: fixed;
+    top: 0px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(49, 49, 49, 0.9)
 } 
 
-.box.y{
-    background: url(images/TravisSmaller.png) no-repeat;
-    background-size: contain;
-} 
+.textColor{
+    color: gold;
+}
 
-.box.x:hover{
-    background: url(images/JamesSmaller.png) no-repeat;
-    background-size: contain;
-} 
-
-.box.y:hover{
-    background: url(images/TravisSmaller.png) no-repeat;
-    background-size: contain;
-} 
-.textMessage.hide{
+.drawMessage, .winMessage{
     display: none;
 }
-.textMessage{
-    margin: -80px;
+.drawMessage.show, .winMessage.show{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    color: gold;
 
-} 
-
-/* .loserMessage{
-    margin: -180px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    color: gold;
 }
 
-.winnerMessage{
-    margin: -180px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    color: gold;
-} */
-
-.startGame .character .img > img.selected{
+.startGame .profile .img > img.selected{
     background-color: aqua;
     border: 2px solid gold;
     border-radius: 20px;
 }
 
+.win{
+    background-color: lime !important;
+}
